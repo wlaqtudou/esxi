@@ -1,7 +1,17 @@
 ESXi 8.0 U3 Realtek 网卡驱动注入制作说明
 
 多合1网卡驱动脚本https://github.com/itiligent/ESXi-Custom-ISO
+注释掉
+# $manualUpdate1 = "VMware-ESXi-8.0U3i-25205845-depot.zip"
+# $manualUpdateUrl1 = "https://itiligent-my.sharepoint.com/personal/david_itiligent_com_au/_layouts/15/guestaccess.aspx?share=IQCF4Hyn6mTeQa_4ZDCjKEHTAQnKFHxTOAsUDSFDn6m7W00&e=Sm7Cyf&download=1"
+修改为
+$manualUpdate1 = "VMware-VMvisor-Installer-8.0.0.update03-24280767.x86_64-Dell_Customized-A02.zip"
+
+运行
 .\esxi8.ps1 -izip ".\VMware-VMvisor-Installer-8.0.0.update03-24280767.x86_64-Dell_Customized-A02.zip" -nsc
+
+esxi8.0-24280767下载地址:
+https://dl.dell.com/FOLDER12885639M/1/VMware-VMvisor-Installer-8.0.0.update03-24280767.x86_64-Dell_Customized-A02.iso
 
 驱动下载地址：
 https://github.com/dRumata/linux-notes/blob/main/net55-r8168-8.039.01-napi.x86_64.vib
